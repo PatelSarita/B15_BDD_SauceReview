@@ -4,12 +4,12 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public class ConfigurationReader {
-    private static Properties properties;
+    private static Properties properties; //Encapsulation
 
     static {
 
         try {
-            // which file to read
+            // which file to read -copy the path of .properties
             String path = "configuration.properties";
             // read the file into java, finds the file using the string path
             FileInputStream input = new FileInputStream(path);
