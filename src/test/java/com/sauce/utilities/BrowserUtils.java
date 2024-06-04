@@ -6,6 +6,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
@@ -405,5 +406,9 @@ public static void waitForPresenceOfElement(By by, long time) {
         //new WebDriverWait(Driver.get(), time).until(ExpectedConditions.presenceOfElementLocated(by));
         WebDriverWait wait = new WebDriverWait(Driver.get(), Duration.ofSeconds(time));
 
+        }
+        public static void selectOption(WebElement element,String option){
+        Select select = new Select(element);
+        select.selectByVisibleText(option);
         }
         }
